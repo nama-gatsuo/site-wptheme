@@ -1,0 +1,69 @@
+.menu {
+  margin: 8px;
+  width: (32px + 2 + 4 * 2) * 6 + 6 * 2;
+  z-index: 999;
+}
+.menu__header {
+  background-color: #035;
+  padding: 8px;
+  font-weight: 600;
+  border-radius: 4px;
+  color: #99ffdd;
+  letter-spacing: 0.1em;
+}
+.menu__area {
+  margin: 10px 0;
+}
+.menu__area__wrapper {
+  padding: 6px;
+}
+.year__header {
+  padding: 8px;
+  color: #99ffdd;
+  cursor: pointer;
+}
+
+.year__month {
+  display: inline-block;
+  font-size: 0.9em;
+  margin: 4px;
+  width: 32px;
+  height: 28px;
+  border-radius: 16px;
+  border: 1px dashed #99ffdd;
+  text-align: center;
+  padding-top: 4px;
+}
+.works__category {
+  display: inline-block;
+  margin: 6px;
+  padding: 4px;
+  font-size: 0.9em;
+  border: 1px dashed #99ffdd;
+}
+.links__item {
+  display: inline-block;
+  width: 31px;
+  margin: 3px;
+  opacity: 0.6;
+  &:hover {
+    opacity: 0.8;
+  }
+  img {
+    width: 100%;
+  }
+}
+.isClickable {
+  cursor: pointer;
+  border: 1px solid #99ffdd;
+  &:hover {
+    box-shadow: 0 0 12px 2px #99ffdd;
+  }
+}
+
+.toggler__button {
+  cursor: pointer;
+}
+.toggler__area {
+  display: none;
+}

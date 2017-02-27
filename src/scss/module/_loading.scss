@@ -1,0 +1,44 @@
+.loading {
+  color: #9fd;
+  .loading__header {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+  .loading__area {
+    width: 100%;
+  }
+}
+
+.loadingItem {
+  height: 24px;
+  .loadingItem__name {
+    display: inline-block;
+    font-size: 0.8em;
+    width: 80px;
+    text-align: center;
+  }
+  .loadingItem__gauge {
+    display: inline-block;
+    width: 214px;
+  }
+}
+
+.gauge__parent {
+  position: relative;
+  top: 2px;
+  width: 200px;
+  height: 18px;
+  background-color: rgb(45, 76, 66);
+  border-radius: 9px;
+}
+.gauge__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px; // temp
+  height: 18px;
+  background-color: #9fd;
+  box-shadow: 0 0 12px 2px #99ffdd;
+  border-radius: 9px;
+}

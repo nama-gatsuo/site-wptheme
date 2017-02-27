@@ -1,0 +1,32 @@
+.pager {
+  list-style: none;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  height: 64px;
+}
+.pager__button {
+  position: absolute;
+  top: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #4c7f6e;
+  border: 1px solid #9fd;
+  text-align: center;
+  font-size: 0.8em;
+  &:hover {
+    background-color: #4c7f6e;
+    box-shadow: 0 0 12px 1px #9fd;
+  }
+  @media #{$sp} {
+    width: 140px;
+  }
+}
+.pager__button--next {
+  left: 12px;
+}
+
+.pager__button--prev {
+  right: 12px;
+}
