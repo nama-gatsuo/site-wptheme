@@ -6,6 +6,7 @@
     <?php get_template_part('header-ogp'); ?>
     <title><?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/dist/css/main.css" />
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>

@@ -104,12 +104,12 @@ export default class NodeScene {
             ctxt.fillStyle = "#003355"; // color
             ctxt.fillRect(0, 0, 512, 128);
 
-            ctxt.font = "24px 'hiragino'";
+            ctxt.font = "24px 'Noto Sans Japanese'";
             ctxt.fillStyle = "#99ffdd"; // color
             ctxt.fillText(POSTS[i].title.rendered, 12, 64);
 
             ctxt.fillStyle = "#99ffdd";
-            ctxt.font = "16px 'hiragino'";
+            ctxt.font = "16px 'Noto Sans Japanese'";
             ctxt.fillText(this.getDate(POSTS[i]["date"]), 12, 96);
 
             // objの作成
@@ -143,7 +143,7 @@ export default class NodeScene {
             canvas.height = 128;
             let ctxt = canvas.getContext('2d');
 
-            ctxt.font = "18px 'hiragino'";
+            ctxt.font = "18px 'Noto Sans Japanese'";
             ctxt.fillStyle = "#99ffdd"; // color
             let ts = PAGES[i].title.rendered.split(' ');
             for (let i = 0; i < ts.length; i++) {
@@ -240,7 +240,7 @@ export default class NodeScene {
         c.height = 128;
         let ct = c.getContext('2d');
 
-        ct.font = "64px 'hiragino'";
+        ct.font = "64px 'Noto Sans Japanese'";
         ct.fillStyle = "#99ffdd"; // color
         ct.fillText(text, 12, 64);
 
