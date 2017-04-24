@@ -34,7 +34,7 @@ article.page__content {
   p {
     line-height: 1.9em;
   }
-  p, table {
+  p, table, li {
     font-size: 0.9em;
     font-weight: 200;
   }
@@ -66,7 +66,6 @@ article.page__content {
   li {
     list-style: none;
     margin-left: 18px;
-    font-size: 0.9em;
     &:before {
       content: "+";
       color: inherit;
