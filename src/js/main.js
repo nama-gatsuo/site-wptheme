@@ -207,7 +207,7 @@ var setToggler = () => {
 window.onload = () => {
 
     let data = { _wp_json_nonce: window.nonce };
-    let url = "http://ayumu-nagamatsu.com/wp-json/wp/v2/pages?_embed&parent=7&orderby=menu_order&order=desc&per_page=100";
+    let url = "https://ayumu-nagamatsu.com/wp-json/wp/v2/pages?_embed&parent=7&orderby=menu_order&order=desc&per_page=100";
 
     $.getJSON(url, data).done((result) => {
         window.PAGES = result;
@@ -215,7 +215,7 @@ window.onload = () => {
     });
 
     data = { _wp_json_nonce: window.nonce };
-    url = "http://ayumu-nagamatsu.com/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=100";
+    url = "https://ayumu-nagamatsu.com/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=100";
 
     $.getJSON(url, data).done((result) => {
         window.POSTS = result;
@@ -224,7 +224,7 @@ window.onload = () => {
     });
 
     data = { _wp_json_nonce: window.nonce };
-    url = "http://ayumu-nagamatsu.com/wp-json/wp/v2/categories?parent=9";
+    url = "https://ayumu-nagamatsu.com/wp-json/wp/v2/categories?parent=9";
 
     $.getJSON(url, data).done((result) => {
         window.CATEGORIES = result;

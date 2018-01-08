@@ -15,10 +15,14 @@ endif;
 <meta property="og:url" content="<?php echo get_permalink(); ?>" />
 <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 <meta property="og:locale" content="ja_JP" />
-<?php if (has_post_thumbnail()) : ?>
-<meta property="og:image" content="<?php echo get_thumbnail_image_url(); ?>" />
+<?php if (has_post_thumbnail()) :
+  $img = get_thumbnail_image_url();
+  ?>
+<meta property="og:image" content="<?php echo $img[0]; ?>" />
+<meta property="og:image:width" content="<?php echo $img[1]; ?>" />
+<meta property="og:image:height" content="<?php echo $img[2]; ?>" />
 <?php else : ?>
-<meta property="og:image" content="http://ayumu-nagamatsu.com/wp-content/theme/myportfolio_v2/screenshot.png" />
+<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/screenshot.png" />
 <?php endif; ?>
 <meta property="og:description" content="<?php
 if (is_single()) :

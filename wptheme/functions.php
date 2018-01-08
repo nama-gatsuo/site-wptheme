@@ -8,8 +8,8 @@ register_nav_menus(array(
 // return thumbnail url
 function get_thumbnail_image_url() {
   $image_id = get_post_thumbnail_id();
-  $image_url = wp_get_attachment_image_src($image_id, true);
-  return $image_url[0];
+  $image = wp_get_attachment_image_src($image_id, true);
+  return $image;
 }
 
 // add category to page

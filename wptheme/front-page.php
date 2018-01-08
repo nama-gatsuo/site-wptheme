@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <?php get_template_part('header-ogp'); ?>
     <title><?php bloginfo('name'); ?></title>
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/dist/css/main.css" />
+    <!-- site_url('/', 'https'); // <?php echo site_url('/', 'https'); ?> -->
+    <!-- home_url(); // <?php echo home_url(); ?> -->
+    <!-- home_url('/'); // <?php echo home_url('/'); ?> -->
+    <!-- site_url(); with .css // <?php echo site_url() . '/wp-content/theme/style.css'; ?> -->
+    <!-- home_url(); with .css // <?php echo home_url() . '/wp-content/theme/style.css'; ?> -->
+    <!-- hard code; // https://ayumu-nagamatsu.com/wp-content/theme/style.css -->
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.css" />
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -57,7 +63,7 @@
       </div>
       <div class="menu__area">
         <div class="menu__header">
-          <a href="<?php bloginfo('url');?>/profile/" target="_blank">PROFILE</a>
+          <a href="<?php bloginfo('url');?>/profile/">PROFILE</a>
         </div>
       </div>
       <div class="menu__area toggler">
@@ -65,28 +71,28 @@
         <div class="toggler__area">
           <ul class="menu__area__wrapper">
             <li class="links__item"><a href="https://twitter.com/ayumu_naga" target="_blank">
-              <img src="<?php bloginfo('template_url'); ?>/asset/img/icon/tw.png" alt="twitter" />
+              <img src="<?php echo get_template_directory_uri(); ?>/asset/img/icon/tw.png" alt="twitter" />
             </a></li>
             <li class="links__item"><a href="https://www.facebook.com/ayumu.nagamatsu" target="_blank">
-              <img src="<?php bloginfo('template_url'); ?>/asset/img/icon/fb.png" alt="facebook" />
+              <img src="<?php echo get_template_directory_uri(); ?>/asset/img/icon/fb.png" alt="facebook" />
             </a></li>
             <li class="links__item"><a href="https://github.com/nama-gatsuo" target="_blank">
-              <img src="<?php bloginfo('template_url'); ?>/asset/img/icon/gh.png" alt="github" />
+              <img src="<?php echo get_template_directory_uri(); ?>/asset/img/icon/gh.png" alt="github" />
             </a></li>
             <li class="links__item"><a href="https://www.youtube.com/channel/UC4WGY_mHCT9RPXGnczRku2Q" target="_blank">
-              <img src="<?php bloginfo('template_url'); ?>/asset/img/icon/yt.png" alt="youtube" />
+              <img src="<?php echo get_template_directory_uri(); ?>/asset/img/icon/yt.png" alt="youtube" />
             </a></li>
             <li class="links__item"><a href="https://www.instagram.com/ayumu_naga/" target="_blank">
-              <img src="<?php bloginfo('template_url'); ?>/asset/img/icon/ig.png" alt="instagram" />
+              <img src="<?php echo get_template_directory_uri(); ?>/asset/img/icon/ig.png" alt="instagram" />
             </a></li>
             <li class="links__item"><a href="" target="_blank">
-              <img src="<?php bloginfo('template_url'); ?>/asset/img/icon/sc.png" alt="soundcloud" />
+              <img src="<?php echo get_template_directory_uri(); ?>/asset/img/icon/sc.png" alt="soundcloud" />
             </a></li>
           </ul>
         </div>
       </div>
     </nav>
   </body>
-  <script src="<?php bloginfo('template_url'); ?>/dist/js/main.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/js/main.js"></script>
   <?php wp_footer(); ?>
 </html>

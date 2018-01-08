@@ -4,7 +4,7 @@ import './libs/TrackballControls'
 import NodeDAO from './NodeDAO'
 
 // theme url
-const template_url = "http://ayumu-nagamatsu.com/wp-content/themes/myportfolio_v2/";
+const template_url = "https://ayumu-nagamatsu.com/wp-content/themes/myportfolio_v2/";
 
 export default class NodeScene {
     constructor(){

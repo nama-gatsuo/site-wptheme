@@ -9,7 +9,7 @@
       wp_title('|', true, 'right');
     endif;
     bloginfo('name'); ?></title>
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/dist/css/main.css" />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.css" />
   <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
