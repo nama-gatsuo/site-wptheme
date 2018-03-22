@@ -36,6 +36,7 @@ else :
   echo "This is a Portfolio website of Ayumu Nagamatsu.";
 endif;
 ?>" />
+<meta property="fb:app_id" content="391365291311020" />
 <!-- OGP:TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ayumu_naga">
