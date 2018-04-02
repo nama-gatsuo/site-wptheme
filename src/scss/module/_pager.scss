@@ -9,8 +9,8 @@
 .pager__button {
   position: absolute;
   top: 8px;
-  padding: 8px;
-  border-radius: 10px;
+  padding: 4px;
+  border-radius: 6px;
   background-color: #4c7f6e;
   border: 1px solid #9fd;
   text-align: center;
@@ -20,7 +20,7 @@
     box-shadow: 0 0 12px 1px #9fd;
   }
   @media #{$sp} {
-    width: 140px;
+    width: 112px;
   }
 }
 .pager__button--next {
