@@ -26,16 +26,4 @@ function nobita_merge_page_categories_at_category_archive( $query ) {
 	}
 }
 
-// remove the field of 'content' from the response of REST API
-// https://1fix.io/blog/2016/03/19/wp-api-remove-fields-listing-only/
-function my_rest_prepare_post( $data, $post, $request ) {
-	$_data = $data->data;
-	$params = $request->get_params();
-	if ( ! isset( $params['id'] ) ) {
-		unset( $_data['content'] );
-	}
-	$data->data = $_data;
-	return $data;
-}
-add_filter( 'rest_prepare_post', 'my_rest_prepare_post', 10, 3 );
 ?>

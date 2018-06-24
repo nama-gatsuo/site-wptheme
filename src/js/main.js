@@ -208,6 +208,8 @@ window.onload = () => {
 
     let data = { _wp_json_nonce: window.nonce };
     let url = "https://ayumu-nagamatsu.com/wp-json/wp/v2/pages?_embed&parent=7&orderby=menu_order&order=desc&per_page=100";
+    let filter = "&fields=link,title,categories,_embedded.wp:featuredmedia";
+    url += filter;
 
     $.getJSON(url, data).done((result) => {
         window.PAGES = result;
@@ -216,6 +218,8 @@ window.onload = () => {
 
     data = { _wp_json_nonce: window.nonce };
     url = "https://ayumu-nagamatsu.com/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=100";
+    filter = "&fields=link,title,date";
+    url += filter;
 
     $.getJSON(url, data).done((result) => {
         window.POSTS = result;
