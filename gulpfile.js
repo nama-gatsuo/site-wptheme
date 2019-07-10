@@ -9,10 +9,10 @@ var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 
-gulp.task('js', function(){
+gulp.task('js', () => {
     browserify('./src/js/main.js', { debug: false })
         .transform(babelify.configure({
-            presets: ['es2015']
+            presets: ['@babel/preset-env']
         }))
         .transform('browserify-shim', { global: true })
         .bundle()
@@ -22,11 +22,11 @@ gulp.task('js', function(){
         .pipe(gulp.dest('./wptheme/dist/js'));
 });
 
-gulp.task('js:watch', function(){
-    gulp.watch('./src/js/*.js', ['js']);
+gulp.task('js:watch', () => {
+    gulp.watch('./src/js/*.js', gulp.task('js'));
 });
 
-gulp.task('sass', function(){
+gulp.task('sass', () => {
     gulp.src('./src/scss/main.scss')
         .pipe(
             sass({outputStyle: 'compressed'})
@@ -40,9 +40,9 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./wptheme/dist/css'));
 });
 
-gulp.task('sass:watch', function(){
-    gulp.watch('./src/scss/*.scss', ['sass']);
+gulp.task('sass:watch', () => {
+    gulp.watch('./src/scss/*.scss', gulp.task('sass'));
 });
 
 // default task
-gulp.task('default', ['sass:watch', 'js:watch']);
+gulp.task('default', gulp.parallel('sass:watch', 'js:watch'));
