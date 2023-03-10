@@ -26,4 +26,17 @@ function nobita_merge_page_categories_at_category_archive( $query ) {
 	}
 }
 
+add_action('wp_footer', function() {
+    // https://kuroko-role.co.jp/homepage/wordpress/wordpress-custom-css-js/
+    $dir = get_template_directory_uri();
+    if ( is_single() || is_page() ) {
+		if ( post_custom( 'custom_js' ) ) {
+            $js = explode( ',', post_custom( 'custom_js' ) );
+            foreach ( $js as $value ) {
+                echo "<script src=\"{$dir}/demo/{$value}/main.js\"></script>\n"; // テーマディレクトリ内「js」ディレクトリ参照
+            }
+		}
+	}
+});
+
 ?>
